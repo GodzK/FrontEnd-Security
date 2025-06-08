@@ -18,8 +18,7 @@ This repository provides a minimal setup to learn **frontend security** using **
 ## Setup
 1. Clone the repository:
    ```bash
-   git clone <repo-url>
-   cd frontend-security-bootcamp
+   git clone https://github.com/GodzK/FrontEnd-Security.git
    ```
 2. Install dependencies:
    ```bash
