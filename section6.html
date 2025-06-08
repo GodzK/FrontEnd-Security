@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ทดสอบ Subresource Integrity</title>
+</head>
+<body>
+  <h1>ใช้ CDN อย่างปลอดภัย</h1>
+  <!-- การจัดการ Third-Party Dependencies -->
+   <!-- ผลลัพธ์: ถ้า hash ไม่ตรง สคริปต์จะไม่รัน -->
+    <!-- integrity hash ให้ผิดเพื่อดูว่า script ไม่โหลด -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('h1').text('jQuery โหลดสำเร็จ!');
+    });
+  </script>
+</body>
+</html>

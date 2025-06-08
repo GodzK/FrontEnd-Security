@@ -1,0 +1,18 @@
+<!-- ผลลัพธ์: สคริปต์จะไม่รัน เพราะใช้ textContent
+DOM-based XSS เกิดจากการจัดการ URL parameter ที่ไม่ปลอดภัย การใช้ textContent ป้องกันได้ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ป้องกัน DOM-based XSS</title>
+</head>
+<body>
+  <h1>ทดสอบ DOM-based XSS</h1>
+  <div id="output"></div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const search = params.get('q');
+    // ปลอดภัย
+    document.getElementById('output').textContent = search || 'ไม่มีข้อมูล';
+  </script>
+</body>
+</html>

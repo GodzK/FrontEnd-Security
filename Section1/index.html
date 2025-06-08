@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ปลอดภัยจาก XSS</title>
+</head>
+<body>
+  <h1>ทดสอบการป้องกัน XSS</h1>
+  <input type="text" id="comment" placeholder="ใส่คอมเมนต์">
+  <button onclick="addComment()">ส่ง</button>
+  <div id="output"></div>
+  <script>
+    function addComment() {
+      const comment = document.getElementById('comment').value;
+      document.getElementById('output').textContent = comment; // ปลอดภัย เเทนที่จะใช้ innerhtml
+    }
+  </script>
+</body>
+</html>
